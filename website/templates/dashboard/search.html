@@ -1,0 +1,62 @@
+{% extends 'dash_base.html' %}
+
+
+{% block content  %}
+          <div class="d-flex justify-content-end pb-3">
+            <div class="form-inline">
+              <label class="text-muted mr-3" for="order-sort">Sort Tickets</label>
+              <select class="form-control" id="order-sort">
+                <option>All</option>
+                <option>Open</option>
+                <option>Closed</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover mb-0">
+              <thead>
+                <tr>
+                  <th>Ticket Subject</th>
+                  <th>Date Submitted | Updated</th>
+                  <th>Type</th>
+                  <th>Priority</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a class="navi-link" href="account-single-ticket.html">My new ticket</a></td>
+                  <td>08/08/2017 | 08/14/2017</td>
+                  <td>Website problem</td>
+                  <td><span class="badge badge-warning m-0">High</span></td>
+                  <td><span class="badge badge-accent m-0">Open</span></td>
+                </tr>
+                <tr>
+                  <td><a class="navi-link" href="account-single-ticket.html">Another ticket</a></td>
+                  <td>07/21/2017 | 07/23/2017</td>
+                  <td>Partner request</td>
+                  <td><span class="badge badge-info m-0">Medium</span></td>
+                  <td><span class="badge badge-secondary m-0">Closed</span></td>
+                </tr>
+                <tr>
+                  <td><a class="navi-link" href="account-single-ticket.html">Yet another ticket</a></td>
+                  <td>05/19/2017 | 05/20/2017</td>
+                  <td>Complaint</td>
+                  <td><span class="badge badge-danger m-0">Urgent</span></td>
+                  <td><span class="badge badge-secondary m-0">Closed</span></td>
+                </tr>
+                <tr>
+                  <td><a class="navi-link" href="account-single-ticket.html">My old ticket</a></td>
+                  <td>05/19/2017 | 05/20/2017</td>
+                  <td>Info inquiry</td>
+                  <td><span class="badge badge-success m-0">Low</span></td>
+                  <td><span class="badge badge-secondary m-0">Closed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr class="mb-4">
+          <div class="text-right">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#open-ticket">Submit New Ticket</button>
+          </div>
+{% endblock %}
